@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -80,6 +81,7 @@ h1 {
 
 h2 {
     color: #e63c35;
+    line-height: 1.5;
 }
 
 img {
@@ -93,7 +95,7 @@ p {
 }
 
 
-/* Facebookボタン*/
+/* Facebookボタン
 
 .fb-btn {
     margin-top: 16px;
@@ -111,6 +113,7 @@ p {
     color: #3b5998;
     transition: 0.8s;
 }
+*/
 
 .content {
     border-bottom: 1px solid #eee;
@@ -174,7 +177,7 @@ p.new {
     line-height: 70px;
     font-size: 25px;
     position: absolute;
-    right: 516px;
+    right: 600px;
     top: 626px;
 }
 
@@ -221,14 +224,36 @@ p.new {
     position: relative;
     width: 270px;
     float: left;
+    -webkit-perspective: 500;
+    -moz-perspective: 500;
+    -ms-perspective: 500;
+    perspective: 500;
+    -webkit-perspective-origin: left;
+    -moz-perspective-origin: left;
+    -ms-perspective-origin: left;
+    perspective-origin: left;
 }
 
 #contents2 .animation2 .caption {
     position: absolute;
     padding: 20px;
     background: #e63c35;
-    height: 185px;
+    height: 147.5px;
     width: 100px;
+    opacity: 1;
+    -webkit-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transition: transform 0.3s, opacity 0.1s 0.3s;
+    -o-transition: transform 0.3s, opacity 0.1s 0.3s;
+    transition: transform 0.3s, opacity 0.1s 0.3s;
+    /*回転軸の調整*/
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 
 #contents2 .animation2 .caption h2 {
@@ -240,3 +265,97 @@ p.new {
     color: white;
     font-size: 15px;
 }
+
+#contents2 .animation2:hover .caption {
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: transform 0.4s, opacity 0.1s;
+    -o-transition: transform 0.4s, opacity 0.1s;
+    transition: transform 0.4s, opacity 0.1s;
+}
+
+#contents2 .anmation2 img {
+    -webkit-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+    -webkit-transition: transform 0.4;
+    -o-transition: transform 0.4;
+    transition: transform 0.4;
+}
+
+#main .fbbutton {
+    font-size: 16px;
+    color: #3b5998;
+    text-decoration: none;
+    letter-spacing: 3px;
+    padding: 10px 30px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.fbbutton .edge {
+    display: block width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none repeat scroll 0 0 #3b5998;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fbbutton .edge1 {
+    width: 1px;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.fbbutton .edge2 {
+    height: 1px;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    transition-delay: 0.2s;
+}
+
+.fbbutton .edge3 {
+    width: 1px;
+    left: auto;
+    right: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.fbbutton .edge4 {
+    height: 1px;
+    top: auto;
+    bottom: 0;
+    height: 1px;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+a .fbbutton: hover .edge {}
+
+height: 1px;
+-webkit-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+-o-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
